@@ -182,6 +182,7 @@ local last = nil
 RegisterNUICallback('cam', function(data)
     if last ~= data.cam then 
         CreateCam(0.0, 0.0, 0.0, 0.0, 0.0, GetEntityHeading(PlayerPedId()) - 180.0)
+	SetEntityHeading(PlayerPedId(), 7.4987)
         SwitchCam(data.cam)
     else
         DeleteCam()
