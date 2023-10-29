@@ -71,6 +71,10 @@ $(document).ready(function(){
 
     $('.clothe-index-text').on('input', function() {
         enforceMinMax(this);
+        $(this).val(Number($(this).val()))
+        var el = $(this);
+        enforceMinMaxJq(el)
+        inputChange($(this))
     });
 
     $('.clothe-buttons').on( "click", function() {
